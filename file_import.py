@@ -3,6 +3,16 @@ import re
 
 
 def file_import():
+    """This file takes in raw MPE logs and searches them for send a receive reports. It will then organize them into a DataFrame table
+    and sorts them numerically.
+    
+    This file assumes that your MPE send and receive reports have the form
+    [0] Starting MPI_Isend with count = x, dest = y, tag = z
+    [4] Starting MPI_Irecv with count = x, dest = y, tag = z
+    
+    It will return sorted DataFrame tables to be passed to mismatched_lists"""
+    
+    
     print "Ok, I will import and sort your MPE send and receive logs"
     file = raw_input("Please input the path to your file destination")
     f = open(file,'r')
