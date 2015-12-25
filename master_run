@@ -1,0 +1,5 @@
+from file_import import file_import
+from mismatch2 import mismatch_lists2
+
+send_list, recv_list = file_import()
+mismatch_lists2(send_list,recv_list)
