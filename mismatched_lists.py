@@ -137,7 +137,10 @@ def mismatch_lists(table1,table2):
     for i in rec_match_list:
         #and here we had processes ready to receive but nothing sending
         err_tab_recv = err_tab_recv.drop(i)
-
+    
+    #rearrange columns for receiving processes with no sending match for clairty in output log
+    err_tab_recv = err_tab_recv[["Destination","Sender","Tag","Length"]]
+    
     #output reports to .log file
     path = raw_input("Where would you  like to save this file? Please provide the path to the directory")
     file_name = raw_input("What would you like to name this file (no file extenions)?")
