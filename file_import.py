@@ -8,7 +8,7 @@ def file_import():
     
     This file assumes that your MPE send and receive reports have the form
     [0] Starting MPI_Isend with count = x, dest = y, tag = z
-    [4] Starting MPI_Irecv with count = x, dest = y, tag = z
+    [4] Starting MPI_Irecv with count = x, source = y, tag = z
     
     It will return sorted DataFrame tables to be passed to mismatch_lists"""
     
