@@ -22,10 +22,10 @@ These are all standard included in the Anaconda distribution
 
 #Output
 mismatched_lists will output four items:
-1. The number of messages each process is sending
-2. The number of messages each process is expected to send
-3. A table that contains the send processes with no process to receive
-4. A table that contains the receving processes with no process to send to them
+ 1. The number of messages each process is sending
+ 2. The number of messages each process is expected to send
+ 3. A table that contains the send processes with no process to receive
+ 4. A table that contains the receving processes with no process to send to them
 
 You can quickly tell where the unmatched processes are by looking at items 1 and 2. If the numbers do not match, then there is an extra send process or receiving process, whichever number is larger. This is an easy way to check that mismatched_lists found all the unmatched process, since you already know how many to expect. 
 
