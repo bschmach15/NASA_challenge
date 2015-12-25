@@ -38,7 +38,7 @@ def file_import():
         #extract the numbers from MPI_Isend string, and return them as integers
         num = map(int, re.findall("\d+",list_send[i]))
         #create a DataFrame to be appending to the master list, df_send
-        #make sure it has the same column names
+        #make sure it has the same column names as df_send
         df_app = pd.DataFrame([num],columns = ["Sender","Length","Destination","Tag"])
         #append the new MPI_Isend process, making sure it is indexed correctly
         df_send = df_send.append(df_app,ignore_index=True)
@@ -53,7 +53,7 @@ def file_import():
     print "I've got them all in tables, just have to sort them"
 
     #Sort numerically, starting with 0. This should group our processes by sender
-    #We first want it to sort by sender, then by destination, and then finally by the tag
+    #First sort by sender, then by destination, and then finally by the tag
     #this will make comparisons much easier
     df_send_sorted = df_send.sort_values(["Sender", "Destination","Tag"],ascending=[True,True,True])
     df_recv_sorted = df_recv.sort_values(["Sender","Destination","Tag"],ascending=[True,True,True])
