@@ -14,7 +14,7 @@ def file_import():
     
     
     print "Ok, I will import and sort your MPE send and receive logs"
-    file = raw_input("Please input the path to your file destination")
+    file = raw_input("Please input the path to your file destination, file name included")
     f = open(file,'r')
 
     #create empty lists to fill with MPE_Isend and MPI_Irecv strings
