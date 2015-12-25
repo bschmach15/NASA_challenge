@@ -1,5 +1,6 @@
 # NASA_challenge
 My submission for the NASA programming challenge
+
 These programs were written in python 2.7
 #Required Packages:
 These programs run using the following packages:
@@ -13,10 +14,12 @@ These are all standard included in the Anaconda distribution
 1. Download the .zip file, and extract all files to the destination of your choice
 2. Run master_run.py (It should find the necessary files in the same folder it is located it)
 3. file_input will ask you where your error report is stored, please feed it the entire path (C:\Users\...)
+  * The program will update you on it's progress   
 4. It will then return send_list and recv_list, ready to pass to mismatch_lists
   * send_list is the sorted dataframe containing MPI send reports sorted numerically by sender
   * recv_list is the same, with received reports
-5. master_run will then pass the lists to mismatched_lists to be searched for unmatched send and received reports
+5. master_run will then pass the lists to mismatch_lists to be searched for unmatched send and received reports
+  * mismatch_lists will update you on it's progress, and let you know when it's found an unmatched process
 6. A log file will be outputted detailing where the unmatched reports are. 
 
 
