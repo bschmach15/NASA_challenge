@@ -10,7 +10,7 @@ def file_import():
     [0] Starting MPI_Isend with count = x, dest = y, tag = z
     [4] Starting MPI_Irecv with count = x, dest = y, tag = z
     
-    It will return sorted DataFrame tables to be passed to mismatched_lists"""
+    It will return sorted DataFrame tables to be passed to mismatch_lists"""
     
     
     print "Ok, I will import and sort your MPE send and receive logs"
